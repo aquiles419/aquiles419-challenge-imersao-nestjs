@@ -66,8 +66,8 @@ Exemplo da Requisição:
 
 ```bash
 {
-	"id": "teste1",
-	"symbol": "teste"
+	"id": "assets1",
+	"symbol": "symbol1"
 }
 ```
 
@@ -93,7 +93,7 @@ Exemplo da Requisição:
 
 ```bash
 {
-  "asset_id": "teste1",
+  "asset_id": "orders1",
   "price": 10.99
 }
 ```
