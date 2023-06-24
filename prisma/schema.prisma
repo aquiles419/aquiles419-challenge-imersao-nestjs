@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Assets {
+  id         String   @id @map("_id")
+  symbol     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  Orders     Orders[]
+}
+
+model Orders {
+  id         String   @id @default(uuid()) @map("_id")
+  asset      Assets   @relation(fields: [asset_id], references: [id])
+  asset_id   String
+  price      Float
+  status     String   @default("open")
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
