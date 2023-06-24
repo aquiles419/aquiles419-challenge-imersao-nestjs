@@ -22,12 +22,78 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Esse é o desafio 2 de NestJs da imersão fullcycle.
 
-## Installation
+## Instalação
+
+Execute a aplicação usando docker.
+
+Use a extensão (dev container) no VsCode para auxiliar na execução do projeto.
+
+Selecione a opção : Reabrir no container
+
+Selecione a opção : usar docker-compose.yaml
+
+## Execute a app
 
 ```bash
-$ npm install
+$ npm run start:dev
+```
+
+A aplicação está rodando na porta 3000
+
+## Rotas da App
+
+### GET - /assets
+
+Lista todas as assets existentes no banco
+
+```bash
+http://localhost:3000/assets
+```
+
+### POST - /assets
+
+Cria uma nova assets
+
+```bash
+http://localhost:3000/assets
+```
+
+Exemplo da Requisição:
+
+```bash
+{
+	"id": "teste1",
+	"symbol": "teste"
+}
+```
+
+---
+
+### GET - /orders
+
+Lista todas as orders existentes no banco
+
+```bash
+http://localhost:3000/orders
+```
+
+### POST - /orders
+
+Cria uma nova orders
+
+```bash
+http://localhost:3000/orders
+```
+
+Exemplo da Requisição:
+
+```bash
+{
+  "asset_id": "teste1",
+  "price": 10.99
+}
 ```
